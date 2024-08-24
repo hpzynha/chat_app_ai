@@ -24,7 +24,34 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (context, index) {
               final message = _messages[index];
               return ListTile(
-                title: Text(message.text),
+                title: Align(
+                  alignment: message.isUser
+                      ? Alignment.centerRight
+                      : Alignment.centerLeft,
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: message.isUser ? Colors.blue : Colors.grey[300],
+                      borderRadius: message.isUser
+                          ? const BorderRadius.only(
+                              topLeft: Radius.circular(20),
+                              bottomRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20),
+                            )
+                          : const BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20),
+                            ),
+                    ),
+                    child: Text(
+                      message.text,
+                      style: TextStyle(
+                        color: message.isUser ? Colors.white : Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
               );
             }));
   }
