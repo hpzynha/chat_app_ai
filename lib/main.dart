@@ -1,4 +1,5 @@
-import 'package:chat_app_ai/home_page.dart';
+import 'package:chat_app_ai/onboarding.dart';
+import 'package:chat_app_ai/splash_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const SplashPage(),
     );
   }
 }
