@@ -29,9 +29,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 Image.asset('assets/gpt-robot.png'),
-                SizedBox(
-                  width: 10,
-                ),
+                const SizedBox(width: 10),
                 Text(
                   'Gemini GPT',
                   style: TextStyle(color: Colors.black),

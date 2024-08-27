@@ -1,4 +1,3 @@
-import 'package:chat_app_ai/onboarding.dart';
 import 'package:chat_app_ai/splash_page.dart';
 import 'package:flutter/material.dart';
 
