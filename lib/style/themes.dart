@@ -39,7 +39,7 @@ ThemeData darkMode = ThemeData(
     shadowColor: Color(0xff625b5b),
   ),
   colorScheme: const ColorScheme.dark(
-      background: Color(0xff000000),
+      surface: Color(0xff000000),
       primary: Color(0xff3369FF),
       secondary: Color(0xffEEEEEE)),
   textTheme: const TextTheme(

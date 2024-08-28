@@ -42,7 +42,7 @@ class _HomePageState extends ConsumerState<HomePage> {
             ),
             GestureDetector(
               child: Icon(
-                ref.watch(themeProvider) == ThemeMode.light
+                ref.watch(themeProvider) == ThemeMode.dark
                     ? Icons.light_mode
                     : Icons.dark_mode,
                 color: Colors.grey[400],
@@ -124,7 +124,8 @@ class _HomePageState extends ConsumerState<HomePage> {
                                   color: Colors.grey,
                                 ),
                         border: InputBorder.none,
-                        contentPadding: EdgeInsets.symmetric(horizontal: 20),
+                        contentPadding:
+                            const EdgeInsets.symmetric(horizontal: 20),
                       ),
                     ),
                   ),

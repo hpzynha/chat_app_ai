@@ -11,8 +11,8 @@ class Onboarding extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Column(
               children: [
                 Text(
@@ -34,14 +34,14 @@ class Onboarding extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 32),
+          const SizedBox(height: 32),
           Image.asset('assets/onboarding.png'),
-          SizedBox(height: 32),
+          const SizedBox(height: 32),
           ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => const HomePage()),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -50,9 +50,10 @@ class Onboarding extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
-                padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text('Continuar'),
