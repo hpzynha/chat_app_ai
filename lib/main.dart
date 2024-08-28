@@ -1,4 +1,5 @@
 import 'package:chat_app_ai/splash_page.dart';
+import 'package:chat_app_ai/style/themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,10 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: lightMode,
+      darkTheme: darkMode,
       home: const SplashPage(),
     );
   }
