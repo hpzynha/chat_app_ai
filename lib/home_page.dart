@@ -53,7 +53,7 @@ class _HomePageState extends ConsumerState<HomePage> {
           children: [
             Row(
               children: [
-                Image.asset('assets/gpt-robot.png'),
+                Image.asset('assets/gpt-bot.png'),
                 const SizedBox(width: 10),
                 Text(
                   'Gemini GPT',
@@ -154,7 +154,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                     width: 8,
                   ),
                   _isLoading
-                      ? Padding(
+                      ? const Padding(
                           padding: EdgeInsets.all(8),
                           child: SizedBox(
                             width: 20,
@@ -163,10 +163,13 @@ class _HomePageState extends ConsumerState<HomePage> {
                           ),
                         )
                       : Padding(
-                          padding: const EdgeInsets.all(.0),
+                          padding: const EdgeInsets.all(16.0),
                           child: GestureDetector(
-                            child: Image.asset('assets/send.png'),
                             onTap: callGeminiModel,
+                            child: Icon(
+                              Icons.send,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
                           ),
                         ),
                 ],
