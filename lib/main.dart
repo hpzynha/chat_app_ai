@@ -2,9 +2,11 @@ import 'package:chat_app_ai/splash_page.dart';
 import 'package:chat_app_ai/style/themes.dart';
 import 'package:chat_app_ai/themeNotifier.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const ProviderScope(child: MyApp()));
 }
 
